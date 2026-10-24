@@ -458,3 +458,50 @@ button:focus-visible {
         transition: none !important;
     }
 }
+
+/* Premium hero layout with profile photo */
+.hero-content {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-image {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #B77C56;
+    box-shadow: 0 15px 40px rgba(48, 32, 27, 0.20);
+    background: #E9DCC9;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-image {
+        width: 220px;
+        height: 220px;
+    }
+}
